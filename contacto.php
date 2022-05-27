@@ -4,39 +4,39 @@ $pg = "contacto";
 ?>
 
 <?php
+    if($_POST){
+        $nombre = $_POST["txtNombre"];
+        $correo = $_POST["txtCorreo"];
+        $telefono = $_POST["txtTelefono"];
+        $mensaje = $_POST["txtMensaje"];
 
-if($_POST){
-    $nombre = $_POST["txtNombre"];
-    $correo = $_POST["txtCorreo"];
-    $telefono = $_POST["txtTelefono"];
-    $mensaje = $_POST["txtMensaje"];
+        // Varios destinatarios
+        $destinatario = "gamermanico@gmail.com";
+        $titulo = 'Recibiste un mensaje desde tu Web';
 
-    // Varios destinatarios
-    $para = "gamermanico@gmail.com";
-    $titulo = 'Recibiste un mensaje desde tu Web';
+        // mensaje
+        $cuerpo = "
+        Nombre: $nombre <br>
+        Correo: $correo <br>
+        Telefono: $telefono <br>
+        Mensaje: $mensaje
+        ";
 
-    // mensaje
-    $cuerpo = "
-    Nombre: $nombre <br>
-    Correo: $correo <br>
-    Telefono: $telefono <br>
-    Mensaje: $mensaje
-    ";
+        // Para enviar un correo HTML, debe establecerse la cabecera Content-type
+        $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+        $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
-    // Para enviar un correo HTML, debe establecerse la cabecera Content-type
-    $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-    $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+        // Cabeceras adicionales
+        $cabeceras .= 'To: gamermanico@gmail.com' . "\r\n";
+        $cabeceras .= 'From: contacto@gamermanico.com.ar' . "\r\n";
 
-    // Cabeceras adicionales
-    $cabeceras .= 'To: gamermanico@gmail.com' . "\r\n";
-    $cabeceras .= 'From: contacto@gamermanico.com.ar' . "\r\n";
+        // Enviarlo
 
-    // Enviarlo
+        mail($destinatario,$cuerpo, $cabeceras);
 
-    //mail($para, $titulo, $cuerpo, $cabeceras);
-
-    header("Location: confirmacion-envio.php");
-}
+        header("Location: confirmacion-envio.php");
+        
+    }
 
 ?>
 
@@ -67,7 +67,7 @@ if($_POST){
                     <P>Te invito a que te contactes enviándome un mensaje o bien por whatsapp.</P>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <form action="" method="post"></form>
+                        <form action="contacto.php" method="post"></form>
                         <div class="mb-3">
                             <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre" class="form-control">
                         </div>
