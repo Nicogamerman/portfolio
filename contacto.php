@@ -81,7 +81,9 @@ if($_POST){
                             <textarea name="txtMensaje" id="txtMensaje"  placeholder="Escribe aquí tu mensaje" placeholder="form" class="form-control shadow textarea"></textarea>
                         </div>
                         <div class="mb-3">
-                            <button type="submite" id="btnEnviar" name="btnEnviar" class="btn btn-blanco px-4 btn-enviar">Enviar</button> 
+                            <a href="confirmacion-envio.php">
+                                <button type="submite" id="btnEnviar" name="btnEnviar" class="btn btn-blanco px-4 btn-enviar">Enviar</button> 
+                            </a>
                         </div>
                     </div>
                 </div>          
