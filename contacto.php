@@ -1,5 +1,5 @@
 <?php
-
+ 
 $pg = "contacto";
 
 if($_POST){
