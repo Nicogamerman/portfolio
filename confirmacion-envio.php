@@ -1,8 +1,9 @@
 <?php
  
-$pg = "contacto";
+$pg = "confirmacion-envio";
 
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,7 +38,26 @@ $pg = "contacto";
 
         </div>
     </main>
-    <?php include_once "footer.php";?>
+    <footer class="container container-footer">
+        <div class="row mt-5 pb-3">
+            <div class="col-12 col-sm-3 text-center text-sm-start">
+                <a href="https://github.com" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nicol%C3%A1s-gamerman-8117a2127/" target="_blank" title="Linkedin"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="col-12 col-sm-3 text-center text-sm-start pt-2 p-sm-0">
+                Sponsor: <a href="https://depcsuite.com" target="_blank" title="DEPCSUITE">DePC Suite</a>
+            </div>
+            <div class="col-12 col-sm-3 text-sm-start  pt-2 p-sm-0">
+                Contacto: <a href="">gamermanico@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+    <div class="whatsapp pt-3 pb-4 px-3">
+        <a href="https://api.whatsapp.com/send?phone=3512709882">
+        <i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    
 </body>
 
 </html>
