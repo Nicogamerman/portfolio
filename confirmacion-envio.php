@@ -1,6 +1,6 @@
 <?php
  
-$pg = "contacto";  
+$pg = "contacto";
 
 ?>
 <!DOCTYPE html>
