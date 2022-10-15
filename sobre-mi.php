@@ -118,7 +118,7 @@ $pg ="sobre-mi";
                             <div class="px-4 py-5 card mx-0 mb-4 mb-sm-0">
                                 <h3>HTML5</h3>
                                 <img class="img-fluid d-block mx-auto" width="60"
-                                    src="images/html5.png">
+                                    src="images/HTML5.png">
                             </div>
                         </div>
                         <div class="col-sm-2 col-6 text-center">
