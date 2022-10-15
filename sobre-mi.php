@@ -36,7 +36,7 @@ $pg ="sobre-mi";
                         <a class="py-1 px-3 px-sm-4 btn btn-rojo" href="contacto.php">Enviar mensaje</a>                        
                     </div>
                     <div class="col-12 col-sm-6 container-foto-perfil">
-                        <img src="images/foto-perfil2.jpg" alt="Nicolas Gamerman" title="Nicolas Gamerman" class="foto-perfil img-responsive">
+                        <img src="images/fotoperfil.png" alt="Nicolas Gamerman" title="Nicolas Gamerman" class="foto-perfil img-responsive">
                     </div>
                 </div>          
             </section>
